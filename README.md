@@ -37,5 +37,21 @@ To run the notebook:
 3. Open `Martian_Frost_Detection_Cici_Chang.ipynb` in a Jupyter environment.
 4. Execute the notebook cells sequentially to view the analysis and results.
 
-## Conclusions
-The project provides insights into the effectiveness of CNNs and transfer learning methods in processing extraterrestrial terrain images, demonstrating advanced machine learning techniques in planetary science.
+# Modeling Insights
+- <strong>For precision, transfer learning models and the CNN model are the same. This indicates that the ability of each model to correctly identify the positive class is similar.</strong>
+- <strong>For recall, the CNN model has a significantly lower recall score compared to the transfer learning models and transfer learning models achieved perfect recall scores, which indicates that transfer learning models were able to identify all true positive cases in the daset.</strong>
+- <strong>Similarly, the transfer learning models have much higher f1 score, which means the transfer learning models are more balanced in terms of both precision and recall.</strong>
+
+
+## Explanation
+- <strong>Pre-trained models such as transfer learning models often generalize better, especially when the amount of training data is limited. However, CNN model is more customized, leading to being outperformed by transfer learning model in recall and F1 score.</strong>
+- <strong>The architectures of transfer learning models (ResNet50, EfficientNetB0, and VGG16) are more sophisticated compared to a typical CNN + MLP model, which allows them to capture more nuanced patterns in the data, contributing to a better performance.</strong>
+
+## Model Performance Metrics
+
+| Model           | Precision | Recall   | F1 Score |
+|-----------------|-----------|----------|----------|
+| CNN             | 0.656     | 0.391    | 0.490    |
+| ResNet50        | 0.655     | 1.0      | 0.792    |
+| EfficientNetB0  | 0.655     | 1.0      | 0.792    |
+| VGG16           | 0.655     | 1.0      | 0.792    |
